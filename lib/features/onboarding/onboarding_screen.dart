@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ieee_application0/features/onboarding/widgets/onboarding_widget.dart';
+
+import 'widgets/onboarding_widget.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  static const String routeName = "onBoarding";
-  List<OnBoardingPage> pages = [
+  final List<OnBoardingPage> pages = [
     OnBoardingPage(
       imagePath: "assets/lottie/onBoarding1.json",
       title: "Welcome To IEEE Campus...",
