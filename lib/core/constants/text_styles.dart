@@ -42,4 +42,20 @@ abstract class TextStyles {
     fontSize: 16.sp,
     color: AppColors.black,
   );
+
+  static TextStyle fontBold24Black = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 24.sp,
+    color: AppColors.black,
+  );
+
+  static TextStyle fontBold20Primary = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 20.sp,
+    color: AppColors.primary,
+  );
+  static TextStyle fontRegular14White = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.white,
+  );
 }
