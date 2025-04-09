@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'IEEE App',
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.committeesScreen,
+        initialRoute: Routes.homeScreen,
       ),
     );
   }

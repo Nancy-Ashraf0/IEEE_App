@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../features/committes/presentation/screens/committee_details_screen.dart';
 import '../../features/committes/presentation/screens/committees_screen.dart';
+import '../../features/main_layout/presentation/screens/home_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
 import 'routes.dart';
 
@@ -10,6 +11,8 @@ class AppRouter {
     // this arguments is to be passed in any screen like this ( argument as ClassName )
     final arguments = settings.arguments;
     switch (settings.name) {
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.onboardinScreen:
         return MaterialPageRoute(builder: (_) => OnBoardingScreen());
       case Routes.committeesScreen:
@@ -19,6 +22,8 @@ class AppRouter {
           builder: (_) {
             final args = arguments as Map<String, dynamic>;
             return CommitteeDetailsScreen(
+              isTechnical: args['isTechnical'],
+              index: args['index'],
             );
           },
         );

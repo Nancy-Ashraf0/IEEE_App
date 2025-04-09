@@ -4,8 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/constants/text_styles.dart';
+
 class CommitteeDetailsScreen extends StatelessWidget {
-  const CommitteeDetailsScreen({super.key});
+  final bool isTechnical;
+  final int index;
+  const CommitteeDetailsScreen({
+    super.key,
+    required this.isTechnical,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +109,7 @@ class CommitteeDetailsScreen extends StatelessWidget {
               TweenAnimationBuilder<int>(
                 tween: IntTween(begin: 0, end: 24),
                 duration: Duration(seconds: 3),
-                curve: Easing.standardDecelerate,// Adjust speed
+                curve: Easing.standardDecelerate, // Adjust speed
                 builder: (context, value, child) {
                   return Text(
                     "$value",
