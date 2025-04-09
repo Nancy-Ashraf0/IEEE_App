@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ieee_application0/core/constants/app_vectors.dart';
-import 'package:ieee_application0/features/main_layout/presentation/widgets/custom_sponsor_widget.dart';
+import '../../../../core/constants/app_vectors.dart';
+import '../widgets/custom_sponsor_widget.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/text_styles.dart';

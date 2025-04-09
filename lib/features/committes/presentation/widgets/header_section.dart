@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ieee_application0/core/constants/app_vectors.dart';
+import '../../../../core/constants/app_vectors.dart';
+import '../../data/models/commitee_data.dart';
 
-import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/constants/text_styles.dart';
 import '../../data/models/committee.dart';
 
 class HeaderSection extends StatelessWidget {
-  final List<Committee> committeeList;
+  final List<CommitteeModel> committeeList;
   final int index;
   final bool isExpanded;
   const HeaderSection({
@@ -34,7 +34,7 @@ class HeaderSection extends StatelessWidget {
               ),
               SizedBox(height: 4.h),
               Text(
-                "${CommitteesConstants.technicalCommittees[index].membersCount.toString()} Members",
+                "${technicalCommittees[index].membersCount.toString()} Members",
                 style: TextStyles.fontMedium14.copyWith(fontSize: 16.sp),
               ),
             ],

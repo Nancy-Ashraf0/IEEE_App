@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ieee_application0/core/constants/app_images.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../data/models/commitee_data.dart';
 
 import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/constants/text_styles.dart';
 
 class CommitteeDetailsScreen extends StatelessWidget {
@@ -81,7 +81,7 @@ class CommitteeDetailsScreen extends StatelessWidget {
           children: <Widget>[
             Text("About Committee", style: TextStyles.fontBold18Black),
             Text(
-              CommitteesConstants.technicalCommittees[0].description,
+              technicalCommittees[0].description,
               style: TextStyles.fontRegular16Gray,
             ),
             _buildActiveMembers(),
