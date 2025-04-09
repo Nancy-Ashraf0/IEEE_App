@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ieee_application0/core/constants/app_vectors.dart';
 
 import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/constants/text_styles.dart';
@@ -45,7 +46,7 @@ class HeaderSection extends StatelessWidget {
           width: isExpanded ? 120.h : 80.h,
           duration: const Duration(milliseconds: 300),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.r)),
-          child: SvgPicture.asset("assets/vectors/web.svg", fit: BoxFit.cover),
+          child: SvgPicture.asset(AppVectors.flutter, fit: BoxFit.cover),
         ),
       ],
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ieee_application0/core/constants/app_vectors.dart';
+import 'package:ieee_application0/core/helpers/extentions.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/committees_constants.dart';
@@ -74,9 +76,8 @@ class _CommitteesScreenState extends State<CommitteesScreen> {
     return AppBar(
       backgroundColor: Colors.white,
       leading: IconButton(
-        icon: SvgPicture.asset('assets/vectors/arrow_back.svg'),
-        // onPressed: () => context.pop(), // This is a custom extension method
-        onPressed: () => {},
+        icon: SvgPicture.asset(AppVectors.arrowBack),
+        onPressed: () => context.pop(), // This is a custom extension method
       ),
       title: Text(
         'Committees',
