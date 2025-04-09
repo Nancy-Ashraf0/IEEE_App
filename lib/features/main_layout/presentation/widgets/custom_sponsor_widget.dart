@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/constants/app_colors.dart';
+import '../../data/models/sponsor_data.dart';
 
 class CustomSponsorWidget extends StatelessWidget {
   const CustomSponsorWidget({super.key});
@@ -69,9 +71,7 @@ class SponsorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        debugPrint('Sponsor ${index + 1} clicked');
-      },
+      onTap: _lanchUrl,
       child: SizedBox(
         width: 100.w,
         height: 80.h,
@@ -81,5 +81,10 @@ class SponsorCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _lanchUrl() async {
+    final Uri uri = Uri.parse(sponsors[index].url);
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
   }
 }
