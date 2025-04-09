@@ -5,7 +5,7 @@ import '../../../../core/constants/text_styles.dart';
 import '../../data/models/committee.dart';
 
 class ExpandedContent extends StatelessWidget {
-  final List<Committee> committeeList;
+  final List<CommitteeModel> committeeList;
   final int index;
   const ExpandedContent({
     super.key,

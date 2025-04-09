@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../data/models/commitee_data.dart';
 
 import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/constants/text_styles.dart';
+
 class CommitteeDetailsScreen extends StatelessWidget {
-  const CommitteeDetailsScreen({super.key});
+  final bool isTechnical;
+  final int index;
+  const CommitteeDetailsScreen({
+    super.key,
+    required this.isTechnical,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +41,7 @@ class CommitteeDetailsScreen extends StatelessWidget {
       padding: EdgeInsets.all(12.r),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/web_development.png"),
+          image: AssetImage(AppImages.technical),
           fit: BoxFit.fill,
         ),
       ),
@@ -73,7 +81,7 @@ class CommitteeDetailsScreen extends StatelessWidget {
           children: <Widget>[
             Text("About Committee", style: TextStyles.fontBold18Black),
             Text(
-              CommitteesConstants.technicalCommittees[0].description,
+              technicalCommittees[0].description,
               style: TextStyles.fontRegular16Gray,
             ),
             _buildActiveMembers(),
@@ -102,7 +110,7 @@ class CommitteeDetailsScreen extends StatelessWidget {
               TweenAnimationBuilder<int>(
                 tween: IntTween(begin: 0, end: 24),
                 duration: Duration(seconds: 3),
-                curve: Easing.standardDecelerate,// Adjust speed
+                curve: Easing.standardDecelerate, // Adjust speed
                 builder: (context, value, child) {
                   return Text(
                     "$value",

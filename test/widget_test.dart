@@ -8,15 +8,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ieee_application0/core/routing/app_router.dart';
-import 'package:ieee_application0/features/committes/presentation/screens/committee_details_screen.dart';
-import 'package:ieee_application0/features/onboarding/onboarding_screen.dart';
-
 import 'package:ieee_application0/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget( MyApp(appRouter: AppRouter(),));
+    await tester.pumpWidget(MyApp(appRouter: AppRouter()));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

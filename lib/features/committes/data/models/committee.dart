@@ -1,11 +1,11 @@
-class Committee {
+class CommitteeModel {
   final String name;
   final String briefDescription;
   final String description;
   final String iconPath;
   final int membersCount;
 
-  const Committee({
+  const CommitteeModel({
     required this.name,
     required this.briefDescription,
     required this.description,

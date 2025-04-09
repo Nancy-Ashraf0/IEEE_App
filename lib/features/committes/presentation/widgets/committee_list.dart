@@ -6,7 +6,7 @@ import 'committee_card.dart';
 
 class CommitteeList extends StatelessWidget {
   final int tabIndex;
-  final List<Committee> committeeList;
+  final List<CommitteeModel> committeeList;
   final List<bool> expandedStates;
   final Function(int, int) onItemTapped;
 

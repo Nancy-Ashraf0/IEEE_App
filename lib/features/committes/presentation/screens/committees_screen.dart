@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../core/constants/app_images.dart';
+import '../../../../core/constants/app_vectors.dart';
+import '../../../../core/helpers/extentions.dart';
+import '../../data/models/commitee_data.dart';
 
 import '../../../../core/constants/app_colors.dart';
-import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/constants/text_styles.dart';
 import '../widgets/committee_list.dart';
 import '../widgets/committee_tap.dart';
-
 
 class CommitteesScreen extends StatefulWidget {
   const CommitteesScreen({super.key});
@@ -18,11 +20,8 @@ class CommitteesScreen extends StatefulWidget {
 
 class _CommitteesScreenState extends State<CommitteesScreen> {
   final List<List<bool>> _expandedStates = [
-    List.generate(CommitteesConstants.technicalCommittees.length, (i) => false),
-    List.generate(
-      CommitteesConstants.nonTechnicalCommittees.length,
-      (i) => false,
-    ),
+    List.generate(technicalCommittees.length, (i) => false),
+    List.generate(nonTechnicalCommittees.length, (i) => false),
   ];
 
   void _toggleExpansion(int tabIndex, int cardIndex) {
@@ -57,13 +56,13 @@ class _CommitteesScreenState extends State<CommitteesScreen> {
       children: [
         CommitteeList(
           tabIndex: 0,
-          committeeList: CommitteesConstants.technicalCommittees,
+          committeeList: technicalCommittees,
           expandedStates: _expandedStates[0],
           onItemTapped: _toggleExpansion,
         ),
         CommitteeList(
           tabIndex: 1,
-          committeeList: CommitteesConstants.nonTechnicalCommittees,
+          committeeList: nonTechnicalCommittees,
           expandedStates: _expandedStates[1],
           onItemTapped: _toggleExpansion,
         ),
@@ -75,9 +74,8 @@ class _CommitteesScreenState extends State<CommitteesScreen> {
     return AppBar(
       backgroundColor: Colors.white,
       leading: IconButton(
-        icon: SvgPicture.asset('assets/svgs/arrow_back.svg'),
-        // onPressed: () => context.pop(), // This is a custom extension method
-        onPressed: () => {},
+        icon: SvgPicture.asset(AppVectors.arrowBack),
+        onPressed: () => context.pop(), // This is a custom extension method
       ),
       title: Text(
         'Committees',
@@ -92,12 +90,9 @@ class _CommitteesScreenState extends State<CommitteesScreen> {
           indicatorSize: TabBarIndicatorSize.label,
           dividerHeight: 0.0,
           tabs: const [
+            CommitteeTab(iconPath: AppImages.technical, label: 'Technical'),
             CommitteeTab(
-              iconPath: 'assets/images/technical.png',
-              label: 'Technical',
-            ),
-            CommitteeTab(
-              iconPath: 'assets/images/non_technical.png',
+              iconPath: AppImages.nonTechnical,
               label: 'Non-Technical',
             ),
           ],
