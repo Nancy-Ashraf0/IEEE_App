@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ieee_application0/core/constants/app_images.dart';
 import 'package:ieee_application0/core/constants/app_vectors.dart';
 import 'package:ieee_application0/core/helpers/extentions.dart';
 
@@ -92,12 +93,9 @@ class _CommitteesScreenState extends State<CommitteesScreen> {
           indicatorSize: TabBarIndicatorSize.label,
           dividerHeight: 0.0,
           tabs: const [
+            CommitteeTab(iconPath: AppImages.technical, label: 'Technical'),
             CommitteeTab(
-              iconPath: 'assets/images/technical.png',
-              label: 'Technical',
-            ),
-            CommitteeTab(
-              iconPath: 'assets/images/non_technical.png',
+              iconPath: AppImages.nonTechnical,
               label: 'Non-Technical',
             ),
           ],

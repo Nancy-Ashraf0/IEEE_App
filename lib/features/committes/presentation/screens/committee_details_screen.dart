@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ieee_application0/core/constants/app_images.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/committees_constants.dart';
@@ -40,7 +41,7 @@ class CommitteeDetailsScreen extends StatelessWidget {
       padding: EdgeInsets.all(12.r),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/web_development.png"),
+          image: AssetImage(AppImages.technical),
           fit: BoxFit.fill,
         ),
       ),
