@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ieee_application0/core/constants/app_colors.dart';
-import 'package:ieee_application0/core/helpers/extentions.dart';
 
+import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/text_styles.dart';
+import '../../../../core/helpers/extentions.dart';
 import '../../../../core/routing/routes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -41,7 +41,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30.r,
-                  child: SvgPicture.asset('assets/svgs/user.svg', height: 40.h),
+                  child: SvgPicture.asset(
+                    'assets/vectors/user.svg',
+                    height: 40.h,
+                  ),
                 ),
                 SizedBox(height: 12.h),
                 Text(

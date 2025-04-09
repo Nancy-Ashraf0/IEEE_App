@@ -45,7 +45,7 @@ class HeaderSection extends StatelessWidget {
           width: isExpanded ? 120.h : 80.h,
           duration: const Duration(milliseconds: 300),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(50.r)),
-          child: SvgPicture.asset("assets/svgs/web.svg", fit: BoxFit.cover),
+          child: SvgPicture.asset("assets/vectors/web.svg", fit: BoxFit.cover),
         ),
       ],
     );

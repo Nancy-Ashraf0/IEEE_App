@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/constants/committees_constants.dart';
 import '../../../../core/helpers/extentions.dart';
 import '../../../../core/routing/routes.dart';
-import '../../../../core/constants/committees_constants.dart';
 import '../../data/models/committee.dart';
 import 'action_button.dart';
 import 'collapsed_content.dart';

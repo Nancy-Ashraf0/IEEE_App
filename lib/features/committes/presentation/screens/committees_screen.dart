@@ -8,7 +8,6 @@ import '../../../../core/constants/text_styles.dart';
 import '../widgets/committee_list.dart';
 import '../widgets/committee_tap.dart';
 
-
 class CommitteesScreen extends StatefulWidget {
   const CommitteesScreen({super.key});
 
@@ -75,7 +74,7 @@ class _CommitteesScreenState extends State<CommitteesScreen> {
     return AppBar(
       backgroundColor: Colors.white,
       leading: IconButton(
-        icon: SvgPicture.asset('assets/svgs/arrow_back.svg'),
+        icon: SvgPicture.asset('assets/vectors/arrow_back.svg'),
         // onPressed: () => context.pop(), // This is a custom extension method
         onPressed: () => {},
       ),
